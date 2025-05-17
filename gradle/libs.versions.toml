@@ -3,9 +3,11 @@ junit = "5.12.2"
 spotless = "7.0.3"
 jetbrains-annotations = "26.0.2"
 lombok = "1.18.38"
+fastjson = "2.0.57"
 
 [libraries]
 junit-bom = { module = "org.junit:junit-bom", version.ref = "junit" }
 spotless = { module = "com.diffplug.spotless:spotless-plugin-gradle", version.ref = "spotless" }
 jetbrains-annotations = { module = "org.jetbrains:annotations", version.ref = "jetbrains-annotations"}
 lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
+fastjson = { module = "com.alibaba.fastjson2:fastjson2", version.ref = "fastjson" }
