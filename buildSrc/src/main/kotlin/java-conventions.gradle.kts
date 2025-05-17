@@ -29,6 +29,9 @@ spotless {
         target("src/*/java/**/*.java")
         googleJavaFormat()
     }
+    flexmark {
+        target("**/*.md")
+    }
 }
 
 tasks.named("build") {
