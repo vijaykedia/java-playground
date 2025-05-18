@@ -18,12 +18,12 @@ spotless {
     kotlinGradle {
         target("*.gradle.kts")
         ktlint()
-        ktfmt()
+        ktfmt().googleStyle()
     }
     kotlin {
         target("src/*/kotlin/**/*.kt")
         ktlint()
-        ktfmt()
+        ktfmt().googleStyle()
     }
     java {
         target("src/*/java/**/*.java")
@@ -34,8 +34,8 @@ spotless {
     }
 }
 
-tasks.named("build") {
-    dependsOn("spotlessApply")
+tasks.withType<JavaCompile> {
+    dependsOn(tasks.named ("spotlessApply"))
 }
 
 tasks.test {
